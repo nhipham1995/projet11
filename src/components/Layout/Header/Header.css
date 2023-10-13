@@ -1,0 +1,22 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 75px;
+	margin-bottom: 20px;
+}
+
+.link-list-menu {
+	min-width: 200px;
+	display: flex;
+	justify-content: flex-end;
+	gap: 20px;
+}
+.link-item {
+	font-size: 22px;
+	text-decoration: none;
+	color: #ff6060;
+}
+.link-item-active {
+	text-decoration: underline;
+}
