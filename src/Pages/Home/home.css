@@ -1,0 +1,23 @@
+.logement-list {
+	border-radius: 15px;
+	background-color: #f6f6f6;
+	padding: 30px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+	grid-auto-rows: minmax(100px, auto);
+}
+
+@media screen and (max-width: 1000px) {
+	.logement-list {
+		grid-template-columns: repeat(2, 1fr);
+		background-color: #ffffff;
+		padding: 0px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.logement-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

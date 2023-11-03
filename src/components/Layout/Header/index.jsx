@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ innerHeight }) => {
 	const location = useLocation();
 
 	return (
@@ -11,13 +11,13 @@ const Header = () => {
 				<img
 					src="/assets/logos/logo.png"
 					alt="Logo of company"
-					height={45}
+					className="logo"
 				></img>
 				<ul className="link-list-menu">
 					<Link
-						to="/home"
+						to="/"
 						className={
-							location.pathname === "/home"
+							location.pathname === "/"
 								? "link-item link-item-active"
 								: "link-item"
 						}
@@ -25,9 +25,9 @@ const Header = () => {
 						Accueil
 					</Link>
 					<Link
-						to="/list"
+						to="/about"
 						className={
-							location.pathname === "/list"
+							location.pathname === "/about"
 								? "link-item link-item-active"
 								: "link-item"
 						}

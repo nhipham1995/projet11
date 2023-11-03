@@ -6,6 +6,9 @@
 	margin-bottom: 20px;
 }
 
+.logo {
+	height: 45px;
+}
 .link-list-menu {
 	min-width: 200px;
 	display: flex;
@@ -19,4 +22,15 @@
 }
 .link-item-active {
 	text-decoration: underline;
+}
+@media screen and (max-width: 700px) {
+	.navbar {
+		padding: 10px;
+	}
+	.logo {
+		height: 20px;
+	}
+	.link-item {
+		font-size: 15px;
+	}
 }

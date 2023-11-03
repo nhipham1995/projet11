@@ -1,0 +1,19 @@
+h1 {
+	font-size: 10rem;
+	color: #ff6060;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bolder;
+	margin-top: 20px;
+	margin-bottom: 70px;
+}
+p {
+	color: #ff6060;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 1.5rem;
+	margin-bottom: 50px;
+}
+a {
+	color: #ff6060;
+	font-family: "Montserrat", sans-serif;
+}

@@ -1,0 +1,41 @@
+.banner {
+	margin: 50px 0;
+	position: relative;
+}
+
+.banner-title {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 40px;
+	font-weight: 400;
+	letter-spacing: 0.05cm;
+}
+.banner-image {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 20px;
+	filter: brightness(0.7);
+}
+@media screen and (max-width: 1000px) {
+	.banner-title {
+		font-size: 30px;
+		transform: none;
+		left: 3%;
+		top: 20%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.banner-title {
+		font-size: 20px;
+	}
+	.banner-image {
+		height: 100px;
+	}
+	.banner-title-hidden {
+		display: none;
+	}
+}
