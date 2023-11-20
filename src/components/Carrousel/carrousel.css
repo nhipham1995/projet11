@@ -1,0 +1,68 @@
+.carrousel-image-cover {
+	position: relative;
+}
+.carrousel-image-cover img {
+	border-radius: 30px;
+	height: 500px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.icon-cover {
+	padding: 10px;
+}
+.icon {
+	cursor: pointer;
+	height: 100px;
+	color: white;
+}
+.left-icon {
+	position: absolute;
+	left: 3%;
+	top: 42%;
+	transform: translate(-50%, -50%);
+}
+.right-icon {
+	position: absolute;
+	right: 0%;
+	top: 42%;
+	transform: translate(-50%, -50%);
+}
+.carrousel-image-cover p {
+	position: relative;
+	position: absolute;
+	right: 50%;
+	bottom: 0%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+@media screen and (max-width: 1500px) {
+	.left-icon {
+		left: 4%;
+		top: 45%;
+	}
+	.right-icon {
+		right: 0%;
+		top: 45%;
+	}
+	.icon {
+		height: 80px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.left-icon {
+		left: 5%;
+	}
+}
+@media screen and (max-width: 992px) {
+	.icon {
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.icon {
+		height: 50px;
+	}
+}

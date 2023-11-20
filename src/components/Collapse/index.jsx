@@ -4,12 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 function Collapse(props) {
-	const { title, description } = props;
+	const { title, description, size } = props;
 
 	const [height, setHeight] = useState(0);
 	const [trueHeight, setTrueHeight] = useState(0);
 	const [open, setOpen] = useState(false);
 	const ref = useRef(null);
+	window.addEventListener("resize", () => {
+		console.log("resize", ref?.current?.offsetHeight, height);
+		if (height !== ref?.current?.offsetHeight)
+			setTrueHeight(ref?.current?.offsetHeight);
+	});
 
 	useEffect(() => {
 		setTrueHeight(ref?.current?.offsetHeight);
@@ -28,27 +33,48 @@ function Collapse(props) {
 	};
 
 	return (
-		<div className="collapse">
-			<div className="collapse-title">
+		<div
+			className={
+				size === "small"
+					? "collapse collapse-sm"
+					: "collapse collapse-default"
+			}
+		>
+			<div
+				className={
+					size === "small"
+						? "collapse-title collapse-title-sm"
+						: "collapse-title collapse-title-default"
+				}
+				onClick={clickHandler}
+			>
 				<h3>{title}</h3>
-				<div onClick={clickHandler} className="clickable-zone">
+				<div className="icon-zone">
 					{open ? (
-						<FontAwesomeIcon icon={faChevronDown} />
+						<FontAwesomeIcon
+							icon={faChevronDown}
+							className="spread-icon"
+						/>
 					) : (
-						<FontAwesomeIcon icon={faChevronUp} />
+						<FontAwesomeIcon
+							icon={faChevronUp}
+							className="spread-icon"
+						/>
 					)}
 				</div>
 			</div>
 			{/* this div isn't displayed on web, juste to define the original height of description */}
 			<div className="collapse-description inactive-element" ref={ref}>
-				<p style={{ padding: "30px" }}>{description}</p>
+				<p>{description}</p>
 			</div>
 
 			{/* this div is displayed */}
 			{open && (
 				<div
 					className="collapse-description"
-					style={{ height: height }}
+					style={{
+						height: height + 30,
+					}}
 				>
 					<p>{description}</p>
 				</div>

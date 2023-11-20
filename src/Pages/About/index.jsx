@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "../components/Banner";
-import Collapse from "../components/Collapse";
-import data from "../data/about.json";
+import Banner from "../../components/Banner";
+import Collapse from "../../components/Collapse";
+import data from "../../data/about.json";
 
 function About() {
 	return (

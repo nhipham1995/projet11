@@ -1,0 +1,22 @@
+.stars-list {
+	display: flex;
+	gap: 10px;
+	padding: 0;
+	justify-content: flex-end;
+	margin: 20px 0;
+}
+.star {
+	width: 20px;
+	height: 20px;
+}
+.active-star {
+	color: #ff6060;
+}
+.default-star {
+	color: #e3e3e3;
+}
+@media screen and (max-width: 768px) {
+	.stars-list {
+		direction: ltr;
+	}
+}

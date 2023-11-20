@@ -8,10 +8,12 @@ class Footer extends React.Component {
 				<img
 					src="/assets/logos/logo-in-white.png"
 					alt="Logo of company"
-					height={35}
+					// height={35}
 					className="logo-img"
 				></img>
-				<p>@2020 Kasa. All rights reserved</p>
+				<div>
+					<p>@2020 Kasa. All rights reserved</p>
+				</div>
 			</footer>
 		);
 	}

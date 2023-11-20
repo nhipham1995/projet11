@@ -14,16 +14,23 @@
 	margin-bottom: 0 !important;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
 	.footer img {
 		height: 30px;
 	}
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
 	.footer img {
 		height: 25px;
 	}
-	.footer p {
+	.footer div {
+		display: flex;
+		justify-content: center;
+	}
+	.footer div p {
+		max-width: 200px;
 		font-size: 0.8rem;
+
+		align-items: center;
 	}
 }

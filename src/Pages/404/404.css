@@ -17,3 +17,23 @@ a {
 	color: #ff6060;
 	font-family: "Montserrat", sans-serif;
 }
+
+@media screen and (max-width: 992px) {
+	h1 {
+		font-size: 7rem;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	p {
+		font-size: 1rem;
+		margin-bottom: 50px;
+	}
+}
+@media screen and (max-width: 768px) {
+	h1 {
+		font-size: 5rem;
+	}
+	p {
+		font-size: 0.8rem;
+	}
+}

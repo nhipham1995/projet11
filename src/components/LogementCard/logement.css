@@ -33,7 +33,7 @@ h4.logement-card-title {
 	);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
 	h4.logement-card-title {
 		bottom: -12px;
 		left: 10px;
