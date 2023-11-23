@@ -6,11 +6,7 @@ import data from "../../data/about.json";
 function About() {
 	return (
 		<div>
-			<Banner
-				image={"assets/images/banner.png"}
-				title={"Chez vous, partout et ailleurs"}
-				hidden={true}
-			/>
+			<Banner image={"assets/images/about.png"} hidden={true} />
 			<div className="collapse-list">
 				{data.map((item, index) => (
 					<Collapse

@@ -10,6 +10,7 @@ function Collapse(props) {
 	const [trueHeight, setTrueHeight] = useState(0);
 	const [open, setOpen] = useState(false);
 	const ref = useRef(null);
+
 	window.addEventListener("resize", () => {
 		console.log("resize", ref?.current?.offsetHeight, height);
 		if (height !== ref?.current?.offsetHeight)
@@ -21,8 +22,6 @@ function Collapse(props) {
 	}, [open]);
 
 	const clickHandler = () => {
-		console.log(trueHeight);
-
 		if (open === true) {
 			setHeight(0);
 			setTimeout(() => setOpen(!open), 300);
